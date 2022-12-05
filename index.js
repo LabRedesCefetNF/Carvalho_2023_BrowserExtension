@@ -256,13 +256,14 @@ const variavelSaida = 0;
 
         const htmlCompleto = htmlInicial + bodyHTML + footerHTML;
 
-        let dados_info = document.querySelector("#dados_info");
-
-        dados_info.innerHTML = htmlCompleto;
-
         fs.writeFileSync(`./${urlSite}.html`, htmlCompleto);
 
         console.log('File has been written');
+        
+        let dados_info = document.getElementById('dados_info');
+
+        dados_info.innerHTML = htmlCompleto;
+
     } catch ( err ) {     
 
         const htmlInicial = 
