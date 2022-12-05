@@ -4,8 +4,6 @@ import readline from 'readline';
 import fs from 'fs';
 import open from 'open';
 
-console.log('oioioioioipoi');
-
 const padraoCNPJ = /([0-9]{2}\.?[0-9]{3}\.?[0-9]{3}\/?[0-9]{4}\-?[0-9]{2})/;
 const padraoCEP = /([0-9]{2}\.?[0-9]{3}\-?[0-9]{3})/;
 const padraoData = /([0-9]{2}\/[0-9]{2}\/[0-9]{4})/gm;
@@ -257,6 +255,10 @@ const variavelSaida = 0;
         }
 
         const htmlCompleto = htmlInicial + bodyHTML + footerHTML;
+
+        let dados_info = document.querySelector("#dados_info");
+
+        dados_info.innerHTML = htmlCompleto;
 
         fs.writeFileSync(`./${urlSite}.html`, htmlCompleto);
 

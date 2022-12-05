@@ -19,7 +19,8 @@
     "content_scripts": [
         {
             "js":[
-                "src/main.js"
+                "index.js",
+                "./src/main.js"
             ],
             "matches":[
                 "*://*/*",
