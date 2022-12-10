@@ -1,8 +1,8 @@
 {
     "manifest_version":3,
-    "name":"Tcc",
+    "name":"Extensão comparativa",
     "version":"1.0",
-    "description":"Protótipo tcc",
+    "description":"extensão tcc",
     "icons": {
         "48":"icon48.png",
         "128":"icon128.png"
@@ -13,7 +13,7 @@
             "19":"icon19.png",
             "38":"icon38.png"
         },
-        "default_title":"verificador de avaliações",
+        "default_title":"Extensão comparativa",
         "default_popup":"index.html"
     },
     "content_scripts": [

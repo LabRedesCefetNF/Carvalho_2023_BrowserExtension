@@ -14,7 +14,7 @@ const urlCompleta = "https://" + urlSite;
 
 const variavelSaida = 0;
 
-( async() => { 
+export async function resultado() { 
     let browser; 
     let browser2;   
     try {
@@ -318,7 +318,14 @@ const variavelSaida = 0;
 
         process.exit();
     }
-})();
+}
+resultado();
+
+var url = window.location.href;
+
+console.log(window.location.href);
+
+console.log(resultado(url));
 
     function promptSite( mensagem ) {
         var rl = readline.createInterface({
@@ -369,7 +376,7 @@ const variavelSaida = 0;
         return encontrado;
     }
 
-    async function buscarDataCriacaoDominio ( page, url ) {
+    export async function buscarDataCriacaoDominio ( page, url ) {
         page.setDefaultNavigationTimeout(0);  
         await page.goto(`https://registro.br/tecnologia/ferramentas/whois/?search=${url}`);
         
@@ -384,7 +391,7 @@ const variavelSaida = 0;
         return encontrado;
     }
 
-    async function compararInformacoes ( args1, args2, args3 ) {
+    export async function compararInformacoes ( args1, args2, args3 ) {
         // jogando a string toda pra minuscula e retirando pontos, traços, barras e virgulas e retirando tambem acentuações como til para facilitar a comparação
         let stringLowerCase = args2.replace(/\.|\-/g, '').normalize('NFD').replace(/[\u0300-\u036f]/g, "");
         let string1 = stringLowerCase.replace(/\/|\,/g, ' ').toLowerCase();
