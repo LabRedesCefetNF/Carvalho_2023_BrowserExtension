@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap'); </style>
     <title>Menu</title>
 </head>
 <body>
-    <h1>Essa loja é segura?</h1>
-    
-    <button type="submit" id="btn_dados_info">Verificar</button>
-    <div class="dados_info" id="dados_info"></div>
 
-    <div>
-        <p>só testando</p>
+    <div id="dados-site">
+        
     </div>
 
 </body>
 </html>
-<script type="module" src="index.js" defer></script>
-<script type="module" src="./src/main.js" defer></script>
 
+<script type="module">
+    import fetch from "node-fetch";
+    import pupp from 'puppeteer';
+    import readline from 'readline';
+    import fs from 'fs';
+    import open from 'open';
+</script>
 
-<!-- metas
+<script src="index.js"></script>
 
-1 - fazer os dados do whois aparecerem na extensão 
+<script src="main.js">
+    
+</script>
 
-2 - redirecionar via url para consumidor.gov.br 
-
-3 - redirecionar para o reclame aqui
-
-4 - evitar que a busca do whois abra o navegador (?)  -->
 
